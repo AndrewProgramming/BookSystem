@@ -15,6 +15,9 @@ public class Book {
     @Column(nullable = false)
     private String author;
 
+    public Book() {
+    }
+
     public Book(String name, String author) {
         this.name = name;
         this.author = author;

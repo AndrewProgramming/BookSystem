@@ -9,8 +9,8 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     Book findByName(String name);
 
-//
-//    @Query("from User u where u.name=:name")
-//    Book findUser(@Param("name") String name);
+    @Query(value = "select * from book where book.name=?1", nativeQuery = true)
+    Book findBookByName(String name);
+
 
 }
